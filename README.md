@@ -13,3 +13,6 @@ This repository houses SQL queries and Python scripts used for comprehensive dat
 4. **Geographic Insights:** Leveraged geographical data to assess customer distribution across countries and cities, enabling targeted marketing strategies and inventory management.
 
 5. **Visualization and Reporting:** Created visualizations using Tableau to present key findings, including revenue distribution by movie genre, customer demographics, and rental trends.
+
+6. ## Project Brief
+Please refer to the *project brief* for more information about the project.
