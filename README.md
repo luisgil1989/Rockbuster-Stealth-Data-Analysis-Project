@@ -18,5 +18,5 @@ This repository houses SQL queries and Python scripts used for comprehensive dat
 Please refer to the *project brief* for more information about the project.
 
 ## Tableau URL:
-### https://public.tableau.com/app/profile/luis.gil1084/viz/DescriptiveStatisticsfortheFilmTable/TopRevenues#1
+### [https://public.tableau.com/app/profile/luis.gil1084/viz/DescriptiveStatisticsfortheFilmTable/TopRevenues#1]
 
