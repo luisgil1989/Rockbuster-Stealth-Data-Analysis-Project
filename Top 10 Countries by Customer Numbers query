@@ -1,0 +1,19 @@
+-- Step 1: Top 10 Countries by Customer Numbers
+-- SQL Query to find the top 10 countries with the highest number of customers
+
+SELECT 
+    C.country,  -- Selecting the country name
+    COUNT(DISTINCT CU.customer_id) AS num_customers  -- Counting distinct customer IDs per country
+FROM 
+    customer CU  -- Main customer table alias
+JOIN 
+    address A ON CU.address_id = A.address_id  -- Joining customer to address table
+JOIN 
+    city CI ON A.city_id = CI.city_id  -- Joining address to city table
+JOIN 
+    country C ON CI.country_id = C.country_id  -- Joining city to country table
+GROUP BY 
+    C.country  -- Grouping by country to aggregate customer counts
+ORDER BY 
+    num_customers DESC  -- Sorting countries by number of customers in descending order
+LIMIT 10;  -- Limiting the result to the top 10 countries
