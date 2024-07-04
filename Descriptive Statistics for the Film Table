@@ -1,0 +1,15 @@
+-- Descriptive Statistics for the Film Table
+-- Numerical columns: minimum, maximum, and average
+
+SELECT 
+    MIN(length) AS min_length,  -- Minimum length of films
+    MAX(length) AS max_length,  -- Maximum length of films
+    AVG(length) AS avg_length,  -- Average length of films
+    MIN(replacement_cost) AS min_cost,  -- Minimum replacement cost of films
+    MAX(replacement_cost) AS max_cost,  -- Maximum replacement cost of films
+    AVG(replacement_cost) AS avg_cost,  -- Average replacement cost of films
+    MIN(rental_duration) AS min_rental_duration,  -- Minimum rental duration of films
+    MAX(rental_duration) AS max_rental_duration,  -- Maximum rental duration of films
+    AVG(rental_duration) AS avg_rental_duration   -- Average rental duration of films
+FROM 
+    film;  -- Selecting from the film table
