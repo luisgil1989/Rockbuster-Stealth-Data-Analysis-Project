@@ -14,5 +14,5 @@ This repository houses SQL queries and Python scripts used for comprehensive dat
 
 5. **Visualization and Reporting:** Created visualizations using Tableau to present key findings, including revenue distribution by movie genre, customer demographics, and rental trends.
 
-6. ## Project Brief
+## Project Brief
 Please refer to the *project brief* for more information about the project.
