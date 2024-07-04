@@ -16,3 +16,8 @@ This repository houses SQL queries and Python scripts used for comprehensive dat
 
 ## Project Brief
 Please refer to the *project brief* for more information about the project.
+
+## Tableau URL:
+### https://public.tableau.com/app/profile/luis.gil1084/viz/DescriptiveStatisticsfortheFilmTable/TopRevenues#1
+![image](https://github.com/luisgil1989/Rockbuster-Stealth-Data-Analysis-Project/assets/54444774/d85ea75c-d5d1-412f-a67a-0acc887eb599)
+
