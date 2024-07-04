@@ -1,0 +1,43 @@
+-- Top 10 Customers in the Top 10 Cities
+-- SQL Query to find the top 10 customers who have paid the highest total amounts in the top 10 cities with the most customers
+
+WITH TopCities AS (
+    -- Subquery to find the top 10 cities with the most customers
+    SELECT 
+        CI.city_id 
+    FROM 
+        customer CU 
+    JOIN 
+        address A ON CU.address_id = A.address_id 
+    JOIN 
+        city CI ON A.city_id = CI.city_id 
+    GROUP BY 
+        CI.city_id 
+    ORDER BY 
+        COUNT(DISTINCT CU.customer_id) DESC 
+    LIMIT 10
+)
+SELECT 
+    CU.customer_id,  -- Selecting customer ID
+    CU.first_name,   -- Selecting customer's first name
+    CU.last_name,    -- Selecting customer's last name
+    C.country,       -- Selecting country name
+    CI.city,         -- Selecting city name
+    SUM(P.amount) AS total_amount_paid  -- Calculating total amount paid by the customer
+FROM 
+    customer CU  -- Main customer table alias
+JOIN 
+    address A ON CU.address_id = A.address_id  -- Joining customer to address table
+JOIN 
+    city CI ON A.city_id = CI.city_id  -- Joining address to city table
+JOIN 
+    country C ON CI.country_id = C.country_id  -- Joining city to country table
+JOIN 
+    payment P ON CU.customer_id = P.customer_id  -- Joining payment to customer table
+JOIN 
+    TopCities TC ON CI.city_id = TC.city_id  -- Joining top 10 cities subquery
+GROUP BY 
+    CU.customer_id, CU.first_name, CU.last_name, C.country, CI.city  -- Grouping by customer and location
+ORDER BY 
+    total_amount_paid DESC  -- Ordering by total amount paid in descending order
+LIMIT 10;  -- Limiting the result to the top 10 customers
